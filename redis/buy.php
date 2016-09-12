@@ -11,7 +11,7 @@
 $id = intval($argv[1]);
 
 $redis = new redis();
-$redis->connect("192.168.92.128",6379);
+$redis->connect("192.168.113.128",6379);
 # echo 'user_read_'.$id."\r\n";
 $bool = $redis->get('user_read_'.$id);
 
