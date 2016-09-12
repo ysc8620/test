@@ -20,12 +20,13 @@ $user_bank = $redis->get("user:bank:100");
 $goods_sku = $redis->get("goods:sku:100");
 
 if($user_bank < $goods_price){
-    echo "user bank slow";
+    echo "user bank slow\r\n";
     die();
 }
 
 if($goods_sku<1){
-    echo "goods sku slow";
+    echo "goods sku slow
+\n";
     die();
 }
 //sleep(2);
@@ -37,8 +38,7 @@ $res2 = $redis->decr("goods:sku:100");
 $res3 = $redis->incrByFloat("user:bank:total", $goods_price);
 //$res3 = $redis->exec();
 if($res2){
-    echo "ok
-\n";
+    echo "ok\r\n";
 }else{
     echo "false\r\n";
 }
