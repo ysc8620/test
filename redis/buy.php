@@ -25,11 +25,10 @@ if($user_bank < $goods_price){
 }
 
 if($goods_sku<1){
-    echo "$id==goods sku slow
-\n";
+    echo "$id==goods sku slow\r\n";
     die();
 }
-//sleep(2);
+sleep(2);
 //$redis->watch("user:bank:100");
 //$redis->watch("goods:price:100");
 //$redis->multi();
