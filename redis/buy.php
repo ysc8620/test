@@ -7,7 +7,6 @@
  */
 // $yonghu_yue
 
-$redis->decr();
 
 $id = intval($argv[1]);
 
