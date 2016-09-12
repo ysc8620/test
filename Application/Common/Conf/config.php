@@ -5,7 +5,7 @@ return array(
     'DB_DEPLOY_TYPE'=> true,
     'DB_TYPE' => 'mysql',
     'DB_CHARSET'=> 'utf8mb4',
-    'DB_HOST' => '192.168.92.128,192.168.92.129',
+    'DB_HOST' => '192.168.113.128,192.168.113.129',
     'DB_NAME' => 'test',
     'DB_USER' => 'root,root',
     'DB_PWD' => '123456,123456',
