@@ -29,13 +29,13 @@ if($goods_sku<1){
     die();
 }
 sleep(2);
-//$redis->watch("user:bank:100");
-//$redis->watch("goods:price:100");
-//$redis->multi();
+$redis->watch("user:bank:100");
+$redis->watch("goods:sku:100");
+$redis->multi();
 $res1 = $redis->incrByFloat("user:bank:100","-{$goods_price}");
 $res2 = $redis->decr("goods:sku:100");
 $res3 = $redis->incrByFloat("user:bank:total", $goods_price);
-//$res3 = $redis->exec();
+$res3 = $redis->exec();
 if($res2){
     echo "$id==ok\r\n";
 }else{
